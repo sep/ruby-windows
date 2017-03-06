@@ -5,14 +5,14 @@
 # The Inspec reference, with examples and extensive documentation, can be
 # found at http://inspec.io/docs/reference/resources/
 
-unless os.windows?
-  describe user('root') do
-    it { should exist }
-    skip 'This is an example test, replace with your own test.'
-  end
+describe package('Ruby 2.1.6-p336-x64') do
+  it { should be_installed }
 end
 
-describe port(80) do
-  it { should_not be_listening }
-  skip 'This is an example test, replace with your own test.'
+script = <<-EOH
+  ruby -v 
+EOH
+
+describe powershell(script) do
+  its('stdout') { should match "ruby 2.1.6p336*" }
 end
