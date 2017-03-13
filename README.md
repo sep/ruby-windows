@@ -1,29 +1,30 @@
-# ruby-windows cookbook
+# Description
 
+This cookbook will install Ruby for Windows using the [Ruby Installer](https://rubyinstaller.org/).
 # Requirements
-##Platforms 
 
-This cookbook is tested on the following platforms using Test Kitchen 
+## Platform:
 
-* Windows 10 
+* windows (= 10)
 
-##Chef
+## Cookbooks:
 
-* Chef 12.1+
+*No dependencies defined*
 
-#Attributes 
+# Attributes
 
-##Cookbook Attributes 
+* `node["ruby-windows"]["source"]` -  Defaults to `https://dl.bintray.com/oneclick/rubyinstaller/rubyinstaller-2.1.6-x64.exe`.
+* `node["ruby-windows"]["SHA256"]` -  Defaults to `F99EDEAA2F192403536EC13070D9BF5936A634F8396ED896757129260169C853`.
+* `node["ruby-windows"]["installDir"]` -  Defaults to `C:\\Ruby`.
 
-TODO 
+# Recipes
 
-#Usage 
+* ruby-windows::default
 
-Add the default recipe to your run list
+# License and Maintainer
 
-  {
-    "run_list": [
-      "recipe[ruby-windows::default]"
-    ]
-  }
+Maintainer:: The Authors (<you@example.com>)
+Source:: https://github.com/sep/ruby-windows
+Issues:: https://github.com/sep/ruby-windows/issues
 
+License:: all_rights

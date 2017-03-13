@@ -1,0 +1,1 @@
+This cookbook will install Ruby for Windows using the [Ruby Installer](https://rubyinstaller.org/). 
