@@ -10,9 +10,9 @@ describe package('Ruby 2.1.6-p336-x64') do
 end
 
 script = <<-EOH
-  ruby -v 
+  ruby -v
 EOH
 
 describe powershell(script) do
-  its('stdout') { should match "ruby 2.1.6p336*" }
+  its('stdout') { should match 'ruby 2.1.6p336*' }
 end
